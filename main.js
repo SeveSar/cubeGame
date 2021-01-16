@@ -19,7 +19,9 @@ $startBtn.addEventListener('click', () => {
             clearInterval(timer)
             $gameArea.innerHTML = '';
             $gameArea.style.backgroundColor = "#ccc";
-            $startBtn.classList.remove('hide');
+            setTimeout(function() {
+                $startBtn.classList.remove('hide');
+            }, 1000)
             counter = parseInt(document.querySelector("#game-time").value);
             spanTimeShow.textContent = InputTime.value;
             resultH1.classList.remove('hide');
